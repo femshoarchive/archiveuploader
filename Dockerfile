@@ -1,7 +1,7 @@
 FROM python:3-alpine
 
 ENV GIT_URL=https://github.com/femshoarchive/femshoarchive.github.io \
-    GIT_PATH=repo
+    GIT_PATH=/tmp
 
 WORKDIR /usr/src/app
 
