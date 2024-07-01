@@ -33,7 +33,7 @@ if envmissing:
     exit(1)
 log.info("Environment check passed!")
 
-repopath = os.path.join(os.path.realpath(os.path.curdir), os.getenv("GIT_PATH"))
+repopath = os.path.realpath(os.getenv("GIT_PATH"))
 repo: Repo
 
 log.info("Loading repository...")
