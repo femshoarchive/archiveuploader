@@ -16,4 +16,5 @@ services:
             GIT_USER: <Git user>
             GIT_PASS: <Git password>
             DISCORD_TOKEN: <Discord bot>
+            DISCORD_ALLOWED: <Comma-separated list of allowed user IDs>
 ```
