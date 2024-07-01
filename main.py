@@ -33,7 +33,7 @@ if envmissing:
     exit(1)
 log.info("Environment check passed!")
 
-repopath = os.path.join(os.path.curdir, os.getenv("GIT_PATH"))
+repopath = os.path.join(os.path.realpath(os.path.curdir), os.getenv("GIT_PATH"))
 repo: Repo
 
 log.info("Loading repository...")
@@ -59,8 +59,7 @@ else:
     log.info("Repository cloned!")
 
 
-intents = discord.Intents.default()
-intents.message_content = True
+intents = discord.Intents.none()
 client = discord.Client(intents=intents)
 tree = discord.app_commands.CommandTree(client)
 
