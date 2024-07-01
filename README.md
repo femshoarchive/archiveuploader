@@ -9,7 +9,7 @@ Copy `.env.example` to `.env` and fill it out.
 ```yaml
 services:
     uploader:
-        image:
+        image: ghcr.io/femshoarchive/archiveuploader:main
         restart: unless-stopped
         environment:
             GIT_URL: <Optional, URL to the Git repository>
